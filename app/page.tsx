@@ -410,19 +410,21 @@ const Page = () => {
                 <motion.div
                   key={skill.name}
                   variants={item}
-                  whileHover={{ y: -4 }}
-                  className="group p-5 rounded-2xl border border-white/6 bg-white/2 hover:bg-white/5 transition-all duration-300"
+                  whileHover={{ y: -2 }}
+                  className="group p-3 sm:p-5 rounded-2xl border border-white/6 bg-white/2 hover:bg-white/5 transition-all duration-300"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <Icon className="w-5 h-5 text-emerald-400" />
-                      <span className="font-medium text-sm">{skill.name}</span>
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-2 sm:mb-4 gap-1 sm:gap-2">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
+                      <span className="font-medium text-xs sm:text-sm">
+                        {skill.name}
+                      </span>
                     </div>
-                    <span className="text-xs text-neutral-500">
+                    <span className="text-xxs sm:text-xs text-neutral-500">
                       {skill.mastery}
                     </span>
                   </div>
-                  <div className="h-1.5 rounded-full bg-white/6 overflow-hidden">
+                  <div className="h-1 rounded-full bg-white/6 overflow-hidden">
                     <motion.div
                       className="h-full rounded-full bg-linear-to-r from-emerald-500 to-teal-400"
                       initial={{ width: 0 }}
